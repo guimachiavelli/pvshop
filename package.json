@@ -1,0 +1,25 @@
+{
+  "name": "pvshop",
+  "version": "0.0.0",
+  "description": "pinar and viola webshop",
+  "private" : true,
+  "author": "",
+  "license": "MIT",
+  "dependencies" : {
+	"jquery" : "^2.1.1"
+  },
+  "devDependencies": {
+    "browserify": "^4.2.0",
+    "browserify-shim": "^3.6.0",
+    "gutil": "^1.4.3",
+    "gulp": "^3.8.7",
+    "gulp-concat": "^2.3.3",
+    "gulp-plumber": "^0.6.3",
+    "gulp-rename": "^1.2.0",
+    "gulp-compass": "^1.2.0",
+    "vinyl-source-stream": "^0.1.1"
+  },
+  "browserify": {
+    "debug": true
+  }
+}
