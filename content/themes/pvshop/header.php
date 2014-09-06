@@ -4,12 +4,23 @@
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>pv shop</title>
-		<link rel="shortcut icon" href="<?php bloginfo('url') ?>/favicon.ico" type="image/x-icon">
+		<title>Pinar & Viola Boutique</title>
+		<link rel="shortcut icon" href="<?php echo SITE_URL; ?>/favicon.ico" type="image/x-icon">
 		<?php wp_head(); ?>
 		<meta name="description" content="">
 	</head>
 
 	<body>
+
+		<header class="intro">
+			<h1 class="intro-logo">
+				<img src="<?php echo TEMPLATE_URL; ?>/imgs/pv-boutique-logo.jpg" alt="Pinar & Viola Boutique">
+			</h1>
+
+			<nav class="collection-nav">
+				<h2 class="collection-title btn btn--collection">Como Wifi Collection</h2>
+				<button class="btn btn--collection btn--collection-right">See Other Collections</button>
+			</nav>
+		</header>
 
 		<main class="main">
