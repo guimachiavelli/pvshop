@@ -1,0 +1,134 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  width: 70%;
+  margin: 1em auto; }
+
+img {
+  display: block;
+  width: 100%; }
+
+.btn {
+  background: #dcdbd6;
+  border: 1px solid #333;
+  display: inline-block;
+  padding: .5em;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1;
+  font-family: "Neutral Std", Helvetica, Arial, sans-serif;
+  color: #333; }
+
+.btn--collection {
+  position: absolute;
+  left: -20%;
+  bottom: -.5em; }
+
+.btn--collection-right {
+  right: -20%;
+  left: auto; }
+
+.intro {
+  width: 30%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1; }
+
+.collection-nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+
+.product-list {
+  overflow: hidden; }
+
+.product {
+  float: left;
+  width: 32.3%;
+  height: 0;
+  margin-left: 1%;
+  padding-top: 25%;
+  position: relative; }
+
+.product-thumbnail {
+  width: 100%;
+  position: absolute;
+  bottom: 12%;
+  z-index: 1; }
+  .product-thumbnail img {
+    width: 65%;
+    margin: 0 auto; }
+
+.product-price {
+  position: absolute;
+  z-index: 2;
+  right: 15%;
+  bottom: 12%; }
+
+.cabinet {
+  position: relative; }
+
+.cabinet-top {
+  padding-top: 7%;
+  margin-top: -3.5%;
+  background: #fff url("../imgs/cabinet-top.jpg") no-repeat top center;
+  background-size: 100%; }
+
+.cabinet-body {
+  margin-top: -1px;
+  background: #fff url("../imgs/cabinet-body.jpg") repeat-y top center;
+  background-size: 100%; }
+
+.cabinet-bottom {
+  background: #fff url("../imgs/cabinet-bottom.jpg") no-repeat bottom center;
+  background-size: 100%;
+  height: 0;
+  position: absolute;
+  width: 100%;
+  padding-top: 6.3%;
+  bottom: 0; }
