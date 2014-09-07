@@ -1,11 +1,21 @@
 body {
 	width: 70%;
 	margin: 1em auto;
+	font-family: $main-font;
 }
 
 img {
 	display: block;
 	width: 100%;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 .btn {
@@ -18,6 +28,13 @@ img {
 	line-height: 1;
 	font-family: $main-font;
 	color: $text-color;
+	text-decoration: none;
+
+	&:hover {
+		cursor: pointer;
+		background-color: darken(#dcdbd6, 10%);
+		text-decoration: none;
+	}
 }
 
 .btn--collection {

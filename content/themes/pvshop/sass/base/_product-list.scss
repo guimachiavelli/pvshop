@@ -1,0 +1,33 @@
+.product-list {
+	overflow: hidden;
+}
+
+.product {
+	float: left;
+	width: 32%;
+	height: 0;
+	margin-left: 1%;
+	padding-top: 25%;
+	position: relative;
+}
+
+.product-thumbnail {
+	width: 100%;
+	position: absolute;
+	bottom: 12%;
+	z-index: 1;
+	
+	img {
+		width: 65%;
+		height: auto;
+		margin: 0 auto;
+	}
+}
+
+.product .price {
+	@extend .btn;
+	position: absolute;
+	z-index: 2;
+	right: 12%;
+	bottom: 12%;
+}

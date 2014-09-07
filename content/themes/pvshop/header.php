@@ -14,7 +14,9 @@
 
 		<header class="intro">
 			<h1 class="intro-logo">
-				<img src="<?php echo TEMPLATE_URL; ?>/imgs/pv-boutique-logo.jpg" alt="Pinar & Viola Boutique">
+				<a href="<?php echo SITE_URL; ?>">
+					<img src="<?php echo TEMPLATE_URL; ?>/imgs/pv-boutique-logo.jpg" alt="Pinar & Viola Boutique">
+				</a>
 			</h1>
 
 			<nav class="collection-nav">
