@@ -9,7 +9,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 ?>
-<div class="quantity single-product-quantity">
+	<div class="quantity <?php if (is_product()) {echo 'single-product-quantity'; } ?>">
 	<input
 		type="number"
 		step="<?php echo esc_attr( $step ); ?>"

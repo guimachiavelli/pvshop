@@ -1,3 +1,16 @@
-.woocommerce-message {
+.woocommerce-message, .notification {
 	position: absolute;
+	width: 100%;
+	z-index: 5;
+}
+
+.notification-content {
+	width: 50%;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+
+	.wc-forward:after {
+		content: '';
+	}
 }

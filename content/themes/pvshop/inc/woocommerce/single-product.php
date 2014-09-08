@@ -30,6 +30,18 @@
 
 	}
 
+	function pv_single_product_add_message($message, $product_id) {
+		$product_name = get_product($product_id);
+		$product_name = $product_name->get_title();
+
+		return '<a href="'
+				. get_permalink(woocommerce_get_page_id('cart'))
+			    . '">'
+				. $product_name
+			 	. ' was added to the basket.</a>';
+	}
+	add_filter('wc_add_to_cart_message', 'pv_single_product_add_message', 10, 2);
+
 
 	function pv_single_product_class( $classes ) {
 		global $post;
@@ -41,4 +53,6 @@
 		return $classes;
 	}
 	add_filter('post_class', 'pv_single_product_class');
+
+
 

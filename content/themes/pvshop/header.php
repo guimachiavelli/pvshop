@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Pinar & Viola Boutique</title>
 		<link rel="shortcut icon" href="<?php echo SITE_URL; ?>/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="http://fonts.typotheque.com/WF-023227-007472.css" type="text/css" />
 		<?php wp_head(); ?>
 		<meta name="description" content="">
 	</head>
@@ -19,10 +20,27 @@
 				</a>
 			</h1>
 
-			<nav class="collection-nav">
-				<h2 class="collection-title btn btn--collection">Como Wifi Collection</h2>
-				<button class="btn btn--collection btn--collection-right">See Other Collections</button>
-			</nav>
+			<?php if (is_front_page() || is_product() || is_product_taxonomy()) { ?>
+				<nav class="collection-nav">
+					<h2 class="collection-title btn btn--collection">
+						<?php
+							$current_collection = wp_get_post_terms($post->ID, 'product_cat');
+							$current_collection = $current_collection[0];
+						?>
+						<a href="<?php echo SITE_URL; ?>/collection/<?php echo $current_collection->slug ?>">
+							<?php echo $current_collection->name; ?>
+						</a>
+					</h2>
+					<button class="btn btn--collection btn--collection-right">
+						<span class="select-replacement">See other collections</span>
+						<?php wp_dropdown_categories(array(
+							'taxonomy' => 'product_cat',
+							'show_option_none' => 'See other collections',
+							'class' => 'replaced-select'
+						)); ?>
+					</button>
+				</nav>
+			<?php } ?>
 		</header>
 
 		<main class="main">

@@ -48,7 +48,7 @@ table {
 body {
   width: 70%;
   margin: 1em auto;
-  font-family: "Neutral Std", Helvetica, Arial, sans-serif; }
+  font-family: "Neutral Regular 4", Helvetica, Arial, sans-serif; }
 
 img {
   display: block;
@@ -64,17 +64,27 @@ a {
   background: #dcdbd6;
   border: 1px solid #333;
   display: inline-block;
-  padding: .5em;
+  padding: .5em .5em .25em .5em;
   margin: 0;
   font-size: 12px;
-  line-height: 1;
-  font-family: "Neutral Std", Helvetica, Arial, sans-serif;
+  line-height: 12px;
+  font-family: "Neutral Regular 4", Helvetica, Arial, sans-serif;
   color: #333;
-  text-decoration: none; }
+  text-decoration: none;
+  position: relative; }
   .btn:hover, .product .price:hover {
     cursor: pointer;
     background-color: #c5c3ba;
     text-decoration: none; }
+  .btn a, .product .price a {
+    text-decoration: none; }
+
+.replaced-select {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  z-index: 10; }
 
 .btn--collection {
   position: absolute;
@@ -124,8 +134,18 @@ a {
   .cabinet--inside .cabinet-bottom {
     background-image: url("../imgs/cabinet-inside-bottom.jpg"); }
 
-.woocommerce-message {
-  position: absolute; }
+.woocommerce-message, .notification {
+  position: absolute;
+  width: 100%;
+  z-index: 5; }
+
+.notification-content {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+  text-align: center; }
+  .notification-content .wc-forward:after {
+    content: ''; }
 
 .product-list {
   overflow: hidden; }
@@ -192,3 +212,24 @@ a {
 
 .single-product-quantity {
   display: none; }
+
+.cart-table {
+  margin-top: 5%;
+  width: 100%; }
+  .cart-table th {
+    text-align: left; }
+  .cart-table td {
+    vertical-align: middle;
+    padding-bottom: 1em; }
+  .cart-table .quantity {
+    margin: 0; }
+  .cart-table .actions {
+    border-top: 1px solid #333;
+    padding-top: 1em;
+    text-align: right; }
+
+.cart-product-thumbnail {
+  width: 40%; }
+  .cart-product-thumbnail img {
+    margin: 0 auto;
+    width: 80%; }
