@@ -31,3 +31,18 @@
 			echo '<input type="text" id="featured_collection" name="featured_collection" value="' . $value . '" />';
 		}
 	}
+
+
+add_filter( 'woocommerce_billing_fields', 'custom_woocommerce_billing_fields' );
+
+function custom_woocommerce_billing_fields( $fields ) {
+
+   $fields['billing_state']	= array(
+      'label'          => __('State/County', 'woothemes'),
+      'placeholder'    => __('State/County', 'woothemes'),
+      'required'       => false,
+      'class'          => array('input-text')
+   );
+
+ return $fields;
+}

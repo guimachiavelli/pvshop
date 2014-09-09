@@ -88,12 +88,14 @@ a {
 
 .btn--collection {
   position: absolute;
-  left: -20%;
-  bottom: -.5em; }
+  left: 0;
+  bottom: -.5em;
+  transform: translateX(-50%); }
 
 .btn--collection-right {
-  right: -20%;
-  left: auto; }
+  right: 0;
+  left: auto;
+  transform: translateX(50%); }
 
 .intro {
   width: 30%;
@@ -115,13 +117,19 @@ a {
   margin-top: -3.5%;
   background: #fff url("../imgs/cabinet-top.jpg") no-repeat top center;
   background-size: 100%; }
+  .cabinet-top.cabinet--inside, .cabinet--inside .cabinet-top {
+    padding-top: 6.5%;
+    background: #fff url("../imgs/cabinet-inside-top.jpg") no-repeat top center;
+    background-size: 100%; }
 
-.cabinet-body {
+.cabinet-body, .cart-table .cabinet-body {
   margin-top: -1px;
   background: #fff url("../imgs/cabinet-body.jpg") repeat-y top center;
   background-size: 100%; }
   .cabinet--inside .cabinet-body {
     background-image: url("../imgs/cabinet-inside-body.jpg"); }
+  .cabinet--cart .cabinet-body {
+    background-image: url("../imgs/cabinet-cart-body.jpg"); }
 
 .cabinet-bottom {
   background: #fff url("../imgs/cabinet-bottom.jpg") no-repeat bottom center;
@@ -133,6 +141,8 @@ a {
   bottom: 0; }
   .cabinet--inside .cabinet-bottom {
     background-image: url("../imgs/cabinet-inside-bottom.jpg"); }
+  .cabinet--cart .cabinet-bottom {
+    background-image: url("../imgs/cabinet-cart-bottom.jpg"); }
 
 .woocommerce-message, .notification {
   position: absolute;
@@ -214,22 +224,49 @@ a {
   display: none; }
 
 .cart-table {
-  margin-top: 5%;
   width: 100%; }
   .cart-table th {
     text-align: left; }
   .cart-table td {
     vertical-align: middle;
-    padding-bottom: 1em; }
+    padding: 1.5em; }
+  .cart-table .cabinet-body {
+    border: 0;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    display: block; }
   .cart-table .quantity {
     margin: 0; }
   .cart-table .actions {
-    border-top: 1px solid #333;
-    padding-top: 1em;
     text-align: right; }
 
+.cart-product-remove {
+  width: 3%; }
+
 .cart-product-thumbnail {
-  width: 40%; }
+  width: 26%; }
   .cart-product-thumbnail img {
     margin: 0 auto;
-    width: 80%; }
+    width: 90%; }
+
+.cart-product-note {
+  width: 35%; }
+
+.cart-footer {
+  width: 100%;
+  padding-top: 24%;
+  position: relative;
+  height: 0; }
+
+.cart-total, .cart-calculator, .cart-actions {
+  position: absolute;
+  top: 0;
+  width: 27%;
+  left: 1.5%;
+  padding: 2%; }
+
+.cart-calculator {
+  left: 33%; }
+
+.cart-actions {
+  left: 66%; }

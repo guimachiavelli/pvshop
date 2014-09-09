@@ -18,7 +18,9 @@ function pv_enqueue_scripts() {
 
     wp_localize_script('bundle', 'pv', array('config' => array(
         'templateURL' => TEMPLATE_URL,
-        'siteURL' => SITE_URL
+		'siteURL' => SITE_URL,
     )));
 
 }
+
+

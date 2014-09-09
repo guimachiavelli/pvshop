@@ -31,7 +31,7 @@
 							<?php echo $current_collection->name; ?>
 						</a>
 					</h2>
-					<button class="btn btn--collection btn--collection-right">
+					<h2 class="btn btn--collection btn--collection-right">
 						<span class="select-replacement">See other collections</span>
 						<select class="replaced-select" id="collection-nav">
 							<option>See other collections</option>
@@ -42,7 +42,7 @@
 								}
 							?>
 						</select>
-					</button>
+					</h2>
 				</nav>
 			<?php } ?>
 		</header>

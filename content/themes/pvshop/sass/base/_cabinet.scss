@@ -7,7 +7,13 @@
 	padding-top: 7%;
 	margin-top: -3.5%;
 	background: #fff url('../imgs/cabinet-top.jpg') no-repeat top center;
-	background-size: 100%
+	background-size: 100%;
+
+	&.cabinet--inside, .cabinet--inside & {
+		padding-top: 6.5%;
+		background: #fff url('../imgs/cabinet-inside-top.jpg') no-repeat top center;
+		background-size: 100%;
+	}
 }
 
 .cabinet-body {
@@ -17,6 +23,10 @@
 
 	.cabinet--inside & {
 		background-image: url('../imgs/cabinet-inside-body.jpg');
+	}
+
+	.cabinet--cart & {
+		background-image: url('../imgs/cabinet-cart-body.jpg');
 	}
 }
 
@@ -32,4 +42,10 @@
 	.cabinet--inside & {
 		background-image: url('../imgs/cabinet-inside-bottom.jpg');
 	}
+
+	.cabinet--cart & {
+		background-image: url('../imgs/cabinet-cart-bottom.jpg');
+	}
+
+
 }

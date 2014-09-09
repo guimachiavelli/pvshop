@@ -53,11 +53,14 @@ a {
 
 .btn--collection {
 	position: absolute;
-	left: -20%;
+	left: 0;
 	bottom: -.5em;
+	transform: translateX(-50%);
 }
 
 .btn--collection-right {
-	right: -20%;
+	right: 0;
 	left: auto;
+	transform: translateX(50%);
+	
 }
