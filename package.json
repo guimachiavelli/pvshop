@@ -20,6 +20,12 @@
     "vinyl-source-stream": "^0.1.1"
   },
   "browserify": {
-    "debug": true
+    "debug": true,
+	"transform" : [
+		"browserify-shim"
+	]
+  },
+  "browserify-shim" : {
+	  "jquery": "global:$"
   }
 }

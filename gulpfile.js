@@ -41,6 +41,7 @@
 	gulp.task('develop', function() {
 		gulp.watch([
 			themePath + '/js/*.js',
+			themePath + '/js/*/*.js',
 			themePath + '/sass/*.scss',
 			themePath + '/sass/*/*.scss'
 		], ['browserify', 'compass']);

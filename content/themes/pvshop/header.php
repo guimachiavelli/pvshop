@@ -33,11 +33,15 @@
 					</h2>
 					<button class="btn btn--collection btn--collection-right">
 						<span class="select-replacement">See other collections</span>
-						<?php wp_dropdown_categories(array(
-							'taxonomy' => 'product_cat',
-							'show_option_none' => 'See other collections',
-							'class' => 'replaced-select'
-						)); ?>
+						<select class="replaced-select" id="collection-nav">
+							<option>See other collections</option>
+							<?php
+								$terms = get_terms('product_cat');
+								foreach ($terms as $term) {
+									echo '<option value="' . $term->slug . '">' . $term->name . '</option>';
+								}
+							?>
+						</select>
 					</button>
 				</nav>
 			<?php } ?>
