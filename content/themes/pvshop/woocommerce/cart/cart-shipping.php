@@ -11,13 +11,6 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 ?>
 <tr class="shipping">
-	<th><?php
-		if ( $show_package_details ) {
-			printf( __( 'Shipping #%d', 'woocommerce' ), $index + 1 );
-		} else {
-			_e( 'Shipping and Handling', 'woocommerce' );
-		}
-	?></th>
 	<td>
 		<?php if ( ! empty( $available_methods ) ) : ?>
 

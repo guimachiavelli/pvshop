@@ -91,16 +91,17 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 <div class="cart-footer cabinet-bottom" colspan="6">
 	<?php do_action( 'woocommerce_cart_collaterals' ); ?>
-	<div class="cart-total">
-		Grand Total: <?php wc_cart_totals_subtotal_html(); ?>
+	<div class="cart-total cabinet-box">
+		<p>Grand Total: <?php wc_cart_totals_subtotal_html(); ?></p>
 	</div>
 
 	<div class="cart-calculator">
 		<?php woocommerce_shipping_calculator(); ?>
 	</div>
 
-	<div class="cart-actions">
-		<input type="submit" class="btn" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" /> 				<input type="submit" class="checkout-button alt wc-forward btn" name="proceed" value="<?php _e( 'Checkout', 'woocommerce' ); ?>" />
+	<div class="cart-actions cabinet-box">
+		<!--<input type="submit" class="btn" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" -->
+		<input type="submit" class="checkout-button alt wc-forward btn" name="proceed" value="<?php _e( 'Checkout', 'woocommerce' ); ?>" />
 	</div>
 
 	<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>

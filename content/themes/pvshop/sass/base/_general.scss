@@ -2,6 +2,7 @@ body {
 	width: 70%;
 	margin: 1em auto;
 	font-family: $main-font;
+	font-size: 12px;
 }
 
 img {
@@ -32,7 +33,6 @@ a {
 	position: relative;
 
 	&:hover {
-		cursor: pointer;
 		background-color: darken(#dcdbd6, 10%);
 		text-decoration: none;
 	}
@@ -42,6 +42,12 @@ a {
 	}
 
 }
+
+input.btn, button.btn {
+	cursor: pointer;
+}
+
+
 
 .replaced-select {
 	top: 0;

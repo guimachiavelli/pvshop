@@ -32,15 +32,9 @@ if ( get_option( 'woocommerce_enable_shipping_calc' ) === 'no' || ! WC()->cart->
 			</select>
 		</p>
 
-		<?php if ( apply_filters( 'woocommerce_shipping_calculator_enable_city', false ) ) : ?>
+		<p class="cart-shipping-result"><?php echo wc_cart_totals_shipping_html(); ?></p>
 
-			<p class="form-row form-row-wide">
-				<input type="text" class="input-text" value="<?php echo esc_attr( WC()->customer->get_shipping_city() ); ?>" placeholder="<?php _e( 'City', 'woocommerce' ); ?>" name="calc_shipping_city" id="calc_shipping_city" />
-			</p>
-
-		<?php endif; ?>
-
-		<p><button type="submit" name="calc_shipping" value="1" class="btn"><?php _e( 'Calculate shipping', 'woocommerce' ); ?></button></p>
+		<p  class="cart-calculate"><button type="submit" name="calc_shipping" value="1" class="btn"><?php _e( 'Calculate shipping', 'woocommerce' ); ?></button></p>
 
 		<?php wp_nonce_field( 'woocommerce-cart' ); ?>
 	</section>

@@ -48,7 +48,8 @@ table {
 body {
   width: 70%;
   margin: 1em auto;
-  font-family: "Neutral Regular 4", Helvetica, Arial, sans-serif; }
+  font-family: "Neutral Regular 4", Helvetica, Arial, sans-serif;
+  font-size: 12px; }
 
 img {
   display: block;
@@ -73,11 +74,13 @@ a {
   text-decoration: none;
   position: relative; }
   .btn:hover, .product .price:hover {
-    cursor: pointer;
     background-color: #c5c3ba;
     text-decoration: none; }
   .btn a, .product .price a {
     text-decoration: none; }
+
+input.btn, .product input.price, button.btn, .product button.price {
+  cursor: pointer; }
 
 .replaced-select {
   top: 0;
@@ -121,6 +124,10 @@ a {
     padding-top: 6.5%;
     background: #fff url("../imgs/cabinet-inside-top.jpg") no-repeat top center;
     background-size: 100%; }
+  .cabinet-top.cabinet--cart, .cabinet--cart .cabinet-top {
+    padding-top: 6.5%;
+    background: #fff url("../imgs/cabinet-cart-top.jpg") no-repeat top center;
+    background-size: 100%; }
 
 .cabinet-body, .cart-table .cabinet-body {
   margin-top: -1px;
@@ -143,6 +150,10 @@ a {
     background-image: url("../imgs/cabinet-inside-bottom.jpg"); }
   .cabinet--cart .cabinet-bottom {
     background-image: url("../imgs/cabinet-cart-bottom.jpg"); }
+
+.cabinet-box {
+  background: transparent url("../imgs/cabinet-box.jpg") no-repeat center center;
+  background-size: contain; }
 
 .woocommerce-message, .notification {
   position: absolute;
@@ -223,6 +234,9 @@ a {
 .single-product-quantity {
   display: none; }
 
+.page {
+  position: relative; }
+
 .cart-table {
   width: 100%; }
   .cart-table th {
@@ -260,13 +274,29 @@ a {
 
 .cart-total, .cart-calculator, .cart-actions {
   position: absolute;
-  top: 0;
-  width: 27%;
-  left: 1.5%;
-  padding: 2%; }
+  top: 30%;
+  width: 18%;
+  left: 4.5%;
+  padding: 2%;
+  text-align: center; }
+
+.cart-total {
+  text-align: center; }
+  .cart-total p {
+    padding: .5em .5em .25em .5em; }
 
 .cart-calculator {
-  left: 33%; }
+  left: 33%;
+  top: 15%;
+  width: 28%; }
+  .cart-calculator p {
+    margin-top: 1em; }
 
 .cart-actions {
-  left: 66%; }
+  left: 70%;
+  text-align: center; }
+  .cart-actions .btn, .cart-actions .product .price, .product .cart-actions .price {
+    margin: 0 auto; }
+
+.cart-empty {
+  margin: 2em 0 1em 0; }
