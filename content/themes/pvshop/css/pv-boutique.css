@@ -61,7 +61,7 @@ a {
   a:hover {
     text-decoration: underline; }
 
-.btn, .product .price {
+.btn, .product .price, .checkout-form input, .checkout-form textarea {
   background: #dcdbd6;
   border: 1px solid #333;
   display: inline-block;
@@ -73,13 +73,13 @@ a {
   color: #333;
   text-decoration: none;
   position: relative; }
-  .btn:hover, .product .price:hover {
+  .btn:hover, .product .price:hover, .checkout-form input:hover, .checkout-form textarea:hover {
     background-color: #c5c3ba;
     text-decoration: none; }
-  .btn a, .product .price a {
+  .btn a, .product .price a, .checkout-form input a, .checkout-form textarea a {
     text-decoration: none; }
 
-input.btn, .product input.price, button.btn, .product button.price {
+input.btn, .product input.price, .checkout-form input, button.btn, .product button.price {
   cursor: pointer; }
 
 .replaced-select {
@@ -220,7 +220,7 @@ input.btn, .product input.price, button.btn, .product button.price {
 
 .single-product-info {
   padding-top: 2em; }
-  .single-product-info p, .single-product-info .btn, .single-product-info .product .price, .product .single-product-info .price {
+  .single-product-info p, .single-product-info .btn, .single-product-info .product .price, .product .single-product-info .price, .single-product-info .checkout-form input, .checkout-form .single-product-info input, .single-product-info .checkout-form textarea, .checkout-form .single-product-info textarea {
     margin-bottom: 1em; }
 
 .single-product-bottom-nav {
@@ -228,7 +228,7 @@ input.btn, .product input.price, button.btn, .product button.price {
   .single-product-bottom-nav a {
     display: block;
     margin-bottom: 1em; }
-  .single-product-bottom-nav .btn, .single-product-bottom-nav .product .price, .product .single-product-bottom-nav .price {
+  .single-product-bottom-nav .btn, .single-product-bottom-nav .product .price, .product .single-product-bottom-nav .price, .single-product-bottom-nav .checkout-form input, .checkout-form .single-product-bottom-nav input, .single-product-bottom-nav .checkout-form textarea, .checkout-form .single-product-bottom-nav textarea {
     display: inline-block; }
 
 .single-product-quantity {
@@ -295,8 +295,34 @@ input.btn, .product input.price, button.btn, .product button.price {
 .cart-actions {
   left: 70%;
   text-align: center; }
-  .cart-actions .btn, .cart-actions .product .price, .product .cart-actions .price {
+  .cart-actions .btn, .cart-actions .product .price, .product .cart-actions .price, .cart-actions .checkout-form input, .checkout-form .cart-actions input, .cart-actions .checkout-form textarea, .checkout-form .cart-actions textarea {
     margin: 0 auto; }
 
 .cart-empty {
   margin: 2em 0 1em 0; }
+
+.checkout-form {
+  margin-top: 5%;
+  overflow: hidden; }
+
+.checkout-review-title {
+  margin: 2em 0 1em 0; }
+
+.checkout-review {
+  width: 50%;
+  float: left; }
+  .checkout-review th, .checkout-review td {
+    width: 50%;
+    text-align: left;
+    padding: .5em 0; }
+
+.checkout-form #payment {
+  width: 40%;
+  float: left;
+  background: none; }
+  .checkout-form #payment .payment_methods {
+    border: 0 !important; }
+  .checkout-form #payment #place_order {
+    float: none !important; }
+  .checkout-form #payment div.form-row {
+    border: 0 !important; }

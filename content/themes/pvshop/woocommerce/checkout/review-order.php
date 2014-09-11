@@ -12,11 +12,11 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 <?php if ( ! is_ajax() ) : ?><div id="order_review"><?php endif; ?>
 
-	<table class="shop_table">
+	<table class="checkout-review">
 		<thead>
 			<tr>
 				<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
-				<th class="product-total"><?php _e( 'Total', 'woocommerce' ); ?></th>
+				<th class="product-total"></th>
 			</tr>
 		</thead>
 		<tfoot>
@@ -66,17 +66,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 				<?php endif; ?>
 			<?php endif; ?>
 
-			<?php foreach ( WC()->cart->get_coupons( 'order' ) as $code => $coupon ) : ?>
-				<tr class="order-discount coupon-<?php echo esc_attr( $code ); ?>">
-					<th><?php wc_cart_totals_coupon_label( $coupon ); ?></th>
-					<td><?php wc_cart_totals_coupon_html( $coupon ); ?></td>
-				</tr>
-			<?php endforeach; ?>
-
 			<?php do_action( 'woocommerce_review_order_before_order_total' ); ?>
 
 			<tr class="order-total">
-				<th><?php _e( 'Order Total', 'woocommerce' ); ?></th>
+				<th><?php _e( 'Grand Total', 'woocommerce' ); ?></th>
 				<td><?php wc_cart_totals_order_total_html(); ?></td>
 			</tr>
 
@@ -133,14 +126,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 						?>
 						<li class="payment_method_<?php echo $gateway->id; ?>">
 							<input id="payment_method_<?php echo $gateway->id; ?>" type="radio" class="input-radio" name="payment_method" value="<?php echo esc_attr( $gateway->id ); ?>" <?php checked( $gateway->chosen, true ); ?> data-order_button_text="<?php echo esc_attr( $gateway->order_button_text ); ?>" />
-							<label for="payment_method_<?php echo $gateway->id; ?>"><?php echo $gateway->get_title(); ?> <?php echo $gateway->get_icon(); ?></label>
-							<?php
-								if ( $gateway->has_fields() || $gateway->get_description() ) :
-									echo '<div class="payment_box payment_method_' . $gateway->id . '" ' . ( $gateway->chosen ? '' : 'style="display:none;"' ) . '>';
-									$gateway->payment_fields();
-									echo '</div>';
-								endif;
-							?>
+							<label for="payment_method_<?php echo $gateway->id; ?>"><?php echo $gateway->get_title(); ?> </label>
 						</li>
 						<?php
 					}
@@ -169,10 +155,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			<?php
 			$order_button_text = apply_filters( 'woocommerce_order_button_text', __( 'Place order', 'woocommerce' ) );
 
-			echo apply_filters( 'woocommerce_order_button_html', '<input type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '" />' );
+			echo apply_filters( 'woocommerce_order_button_html', '<input type="submit" class="btn" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '" />' );
 			?>
 
-			<?php if ( wc_get_page_id( 'terms' ) > 0 && apply_filters( 'woocommerce_checkout_show_terms', true ) ) { 
+			<?php if ( wc_get_page_id( 'terms' ) > 0 && apply_filters( 'woocommerce_checkout_show_terms', true ) ) {
 				$terms_is_checked = apply_filters( 'woocommerce_terms_is_checked_default', isset( $_POST['terms'] ) );
 				?>
 				<p class="form-row terms">

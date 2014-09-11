@@ -1,0 +1,47 @@
+.checkout-form {
+	margin-top: 5%;
+	overflow: hidden;
+
+	input, textarea {
+		@extend .btn;
+	}
+}
+
+.checkout-review-title {
+	margin: 2em 0 1em 0;
+}
+
+.checkout-review {
+	width: 50%;
+	float: left;
+
+	th, td {
+		width: 50%;
+		text-align: left;
+		padding: .5em 0;
+	}
+}
+
+.checkout-form {
+
+	#payment {
+		width: 40%;
+		float: left;
+		background: none;
+
+		.payment_methods {
+			border: 0 !important;
+		}
+
+		#place_order {
+			float: none !important;
+		}
+
+
+		div.form-row {
+			border: 0 !important;
+		}
+
+	}
+}
+
