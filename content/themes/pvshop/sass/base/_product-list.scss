@@ -18,7 +18,7 @@
 	z-index: 1;
 	
 	img {
-		width: 65%;
+		width: 60%;
 		height: auto;
 		margin: 0 auto;
 	}
@@ -28,6 +28,6 @@
 	@extend .btn;
 	position: absolute;
 	z-index: 2;
-	right: 12%;
+	right: 3%;
 	bottom: 12%;
 }

@@ -191,14 +191,14 @@ input.btn, .product input.price, .checkout-form input, button.btn, .product butt
   bottom: 12%;
   z-index: 1; }
   .product-thumbnail img {
-    width: 65%;
+    width: 60%;
     height: auto;
     margin: 0 auto; }
 
 .product .price {
   position: absolute;
   z-index: 2;
-  right: 12%;
+  right: 3%;
   bottom: 12%; }
 
 .single-product:after {
