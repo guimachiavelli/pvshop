@@ -57,7 +57,8 @@ img {
 
 a {
   color: #333;
-  text-decoration: none; }
+  text-decoration: none;
+  outline: 0; }
   a:hover {
     text-decoration: underline; }
 
@@ -70,12 +71,17 @@ a {
   font-size: 12px;
   line-height: 12px;
   font-family: "Neutral Regular 4", Helvetica, Arial, sans-serif;
-  color: #333;
+  color: #333333;
   text-decoration: none;
-  position: relative; }
-  .btn:hover, .product .price:hover, .checkout-form input:hover, .checkout-form textarea:hover {
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: 0; }
+  .btn:hover, .product .price:hover, .checkout-form input:hover, .checkout-form textarea:hover, .btn:focus, .product .price:focus, .checkout-form input:focus, .checkout-form textarea:focus {
     background-color: #c5c3ba;
     text-decoration: none; }
+  .btn:active, .product .price:active, .checkout-form input:active, .checkout-form textarea:active {
+    background-color: #a19f91; }
   .btn a, .product .price a, .checkout-form input a, .checkout-form textarea a {
     text-decoration: none; }
 
@@ -118,20 +124,20 @@ input.btn, .product input.price, .checkout-form input, button.btn, .product butt
 .cabinet-top {
   padding-top: 7%;
   margin-top: -3.5%;
-  background: #fff url("../imgs/cabinet-top.jpg") no-repeat top center;
+  background: white url("../imgs/cabinet-top.jpg") no-repeat top center;
   background-size: 100%; }
   .cabinet-top.cabinet--inside, .cabinet--inside .cabinet-top {
     padding-top: 6.5%;
-    background: #fff url("../imgs/cabinet-inside-top.jpg") no-repeat top center;
+    background: white url("../imgs/cabinet-inside-top.jpg") no-repeat top center;
     background-size: 100%; }
   .cabinet-top.cabinet--cart, .cabinet--cart .cabinet-top {
     padding-top: 6.5%;
-    background: #fff url("../imgs/cabinet-cart-top.jpg") no-repeat top center;
+    background: white url("../imgs/cabinet-cart-top.jpg") no-repeat top center;
     background-size: 100%; }
 
 .cabinet-body, .cart-table .cabinet-body {
   margin-top: -1px;
-  background: #fff url("../imgs/cabinet-body.jpg") repeat-y top center;
+  background: white url("../imgs/cabinet-body.jpg") repeat-y top center;
   background-size: 100%; }
   .cabinet--inside .cabinet-body {
     background-image: url("../imgs/cabinet-inside-body.jpg"); }
@@ -139,7 +145,7 @@ input.btn, .product input.price, .checkout-form input, button.btn, .product butt
     background-image: url("../imgs/cabinet-cart-body.jpg"); }
 
 .cabinet-bottom {
-  background: #fff url("../imgs/cabinet-bottom.jpg") no-repeat bottom center;
+  background: white url("../imgs/cabinet-bottom.jpg") no-repeat bottom center;
   background-size: 100%;
   height: 0;
   position: absolute;
@@ -326,3 +332,5 @@ input.btn, .product input.price, .checkout-form input, button.btn, .product butt
     float: none !important; }
   .checkout-form #payment div.form-row {
     border: 0 !important; }
+
+/*# sourceMappingURL=pv-boutique.css.map */

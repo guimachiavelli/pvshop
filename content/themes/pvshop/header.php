@@ -22,12 +22,12 @@
 
 			<?php if (is_front_page() || is_product() || is_product_taxonomy()) { ?>
 				<nav class="collection-nav">
-					<h2 class="collection-title btn btn--collection">
+					<h2 class="collection-title">
 						<?php
 							$current_collection = wp_get_post_terms($post->ID, 'product_cat');
 							$current_collection = $current_collection[0];
 						?>
-						<a href="<?php echo SITE_URL; ?>/collection/<?php echo $current_collection->slug ?>">
+						<a class="btn btn--collection" href="<?php echo SITE_URL; ?>/collection/<?php echo $current_collection->slug ?>">
 							<?php echo $current_collection->name; ?>
 						</a>
 					</h2>

@@ -13,6 +13,7 @@ img {
 a {
 	color: #333;
 	text-decoration: none;
+    outline: 0;
 
 	&:hover {
 		text-decoration: underline;
@@ -30,12 +31,19 @@ a {
 	font-family: $main-font;
 	color: $text-color;
 	text-decoration: none;
-	position: relative;
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: 0;
 
-	&:hover {
+    &:hover, &:focus {
 		background-color: darken(#dcdbd6, 10%);
 		text-decoration: none;
 	}
+
+    &:active {
+		background-color: darken(#dcdbd6, 25%);
+    }
 
 	a {
 		text-decoration: none;
