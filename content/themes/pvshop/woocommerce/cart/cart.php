@@ -19,8 +19,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 <?php do_action( 'woocommerce_before_cart_table' ); ?>
 
-<table class="cart-table" cellspacing="0">
-	<tbody>
+<ul class="cart-table" cellspacing="0">
 		<?php do_action( 'woocommerce_before_cart_contents' ); ?>
 
 		<?php
@@ -30,62 +29,61 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 			if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
 				?>
-				<tr class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?> cabinet-body">
+				<li class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?> cabinet-body cart-product">
+					<div class="cart-product-content">
+						<div class="cart-product-remove">
+							<?php
+								echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf( '<a href="%s" class="remove" title="%s">&times;</a>', esc_url( WC()->cart->get_remove_url( $cart_item_key ) ), __( 'Remove this item', 'woocommerce' ) ), $cart_item_key );
+							?>
+						</div>
 
-					<td class="cart-product-remove">
-						<?php
-							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf( '<a href="%s" class="remove" title="%s">&times;</a>', esc_url( WC()->cart->get_remove_url( $cart_item_key ) ), __( 'Remove this item', 'woocommerce' ) ), $cart_item_key );
-						?>
-					</td>
+						<div class="cart-product-thumbnail">
+							<?php
+								$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 
-					<td class="cart-product-thumbnail">
-						<?php
-							$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
+								if ( ! $_product->is_visible() )
+									echo $thumbnail;
+								else
+									printf( '<a href="%s">%s</a>', $_product->get_permalink(), $thumbnail );
+							?>
+						</div>
 
-							if ( ! $_product->is_visible() )
-								echo $thumbnail;
-							else
-								printf( '<a href="%s">%s</a>', $_product->get_permalink(), $thumbnail );
-						?>
-					</td>
+						<div class="cart-product-note">
+							<p><?php echo $_product->get_attribute('note');?></p>
+						</div>
 
-					<td class="cart-product-note">
-						<p><?php echo $_product->get_attribute('note');?></p>
-					</td>
+						<div class="cart-product-quantity">
+							<?php
+								if ( $_product->is_sold_individually() ) {
+									$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
+								} else {
+									$product_quantity = woocommerce_quantity_input( array(
+										'input_name'  => "cart[{$cart_item_key}][qty]",
+										'input_value' => $cart_item['quantity'],
+										'max_value'   => $_product->backorders_allowed() ? '' : $_product->get_stock_quantity(),
+										'min_value'   => '0'
+									), $_product, false );
+								}
 
-					<td class="cart-product-quantity">
-						<?php
-							if ( $_product->is_sold_individually() ) {
-								$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
-							} else {
-								$product_quantity = woocommerce_quantity_input( array(
-									'input_name'  => "cart[{$cart_item_key}][qty]",
-									'input_value' => $cart_item['quantity'],
-									'max_value'   => $_product->backorders_allowed() ? '' : $_product->get_stock_quantity(),
-									'min_value'   => '0'
-								), $_product, false );
-							}
+								echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key );
+							?>
+						</div>
 
-							echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key );
-						?>
-					</td>
-
-					<td class="cart-product-subtotal">
-						<span class="btn">
-						<?php
-							echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key );
-						?>
-						</span>
-					</td>
-				</tr>
-				<?php
+						<div class="cart-product-subtotal">
+							<span class="btn">
+							<?php
+								echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key );
+							?>
+							</span>
+						</div>
+					</div>
+				</li>
+					<?php
+				}
 			}
-		}
-
-		do_action( 'woocommerce_cart_contents' );
-?>
-	</tbody>
-</table>
+			do_action( 'woocommerce_cart_contents' );
+	?>
+</ul>
 <?php do_action( 'woocommerce_after_cart_table' ); ?>
 
 

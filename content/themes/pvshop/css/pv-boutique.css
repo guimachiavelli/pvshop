@@ -62,7 +62,7 @@ a {
   a:hover {
     text-decoration: underline; }
 
-.btn, .product .price, .checkout-form input, .checkout-form textarea {
+.btn, .product .price, .checkout-form input[type=text], .checkout-form textarea {
   background: #dcdbd6;
   border: 1px solid #333;
   display: inline-block;
@@ -77,15 +77,15 @@ a {
   -webkit-appearance: none;
   -moz-appearance: none;
   outline: 0; }
-  .btn:hover, .product .price:hover, .checkout-form input:hover, .checkout-form textarea:hover, .btn:focus, .product .price:focus, .checkout-form input:focus, .checkout-form textarea:focus {
+  .btn:hover, .product .price:hover, .checkout-form input[type=text]:hover, .checkout-form textarea:hover, .btn:focus, .product .price:focus, .checkout-form input[type=text]:focus, .checkout-form textarea:focus {
     background-color: #c5c3ba;
     text-decoration: none; }
-  .btn:active, .product .price:active, .checkout-form input:active, .checkout-form textarea:active {
+  .btn:active, .product .price:active, .checkout-form input[type=text]:active, .checkout-form textarea:active {
     background-color: #a19f91; }
-  .btn a, .product .price a, .checkout-form input a, .checkout-form textarea a {
+  .btn a, .product .price a, .checkout-form input[type=text] a, .checkout-form textarea a {
     text-decoration: none; }
 
-input.btn, .product input.price, .checkout-form input, button.btn, .product button.price {
+input.btn, .product input.price, .checkout-form input[type=text], button.btn, .product button.price {
   cursor: pointer; }
 
 .replaced-select {
@@ -226,7 +226,7 @@ input.btn, .product input.price, .checkout-form input, button.btn, .product butt
 
 .single-product-info {
   padding-top: 2em; }
-  .single-product-info p, .single-product-info .btn, .single-product-info .product .price, .product .single-product-info .price, .single-product-info .checkout-form input, .checkout-form .single-product-info input, .single-product-info .checkout-form textarea, .checkout-form .single-product-info textarea {
+  .single-product-info p, .single-product-info .btn, .single-product-info .product .price, .product .single-product-info .price, .single-product-info .checkout-form input[type=text], .checkout-form .single-product-info input[type=text], .single-product-info .checkout-form textarea, .checkout-form .single-product-info textarea {
     margin-bottom: 1em; }
 
 .single-product-bottom-nav {
@@ -234,7 +234,7 @@ input.btn, .product input.price, .checkout-form input, button.btn, .product butt
   .single-product-bottom-nav a {
     display: block;
     margin-bottom: 1em; }
-  .single-product-bottom-nav .btn, .single-product-bottom-nav .product .price, .product .single-product-bottom-nav .price, .single-product-bottom-nav .checkout-form input, .checkout-form .single-product-bottom-nav input, .single-product-bottom-nav .checkout-form textarea, .checkout-form .single-product-bottom-nav textarea {
+  .single-product-bottom-nav .btn, .single-product-bottom-nav .product .price, .product .single-product-bottom-nav .price, .single-product-bottom-nav .checkout-form input[type=text], .checkout-form .single-product-bottom-nav input[type=text], .single-product-bottom-nav .checkout-form textarea, .checkout-form .single-product-bottom-nav textarea {
     display: inline-block; }
 
 .single-product-quantity {
@@ -244,43 +244,63 @@ input.btn, .product input.price, .checkout-form input, button.btn, .product butt
   position: relative; }
 
 .cart-table {
-  width: 100%; }
-  .cart-table th {
-    text-align: left; }
-  .cart-table td {
-    vertical-align: middle;
-    padding: 1.5em; }
+  width: 100%;
+  margin: 0 auto; }
   .cart-table .cabinet-body {
     border: 0;
     background-repeat: no-repeat;
-    background-position: bottom center;
+    background-position: top center;
     display: block; }
   .cart-table .quantity {
-    margin: 0; }
+    margin: 0;
+    position: absolute;
+    top: 45%;
+    right: 6%; }
   .cart-table .actions {
     text-align: right; }
+
+.cart-product {
+  margin-bottom: -1px; }
+
+.cart-product-content {
+  width: 33%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10; }
+
+.cart-product-subtotal {
+  position: absolute;
+  right: 6%;
+  top: 65%; }
 
 .cart-product-remove {
   width: 3%; }
 
 .cart-product-thumbnail {
-  width: 26%; }
+  width: 80%;
+  padding-bottom: 15%; }
   .cart-product-thumbnail img {
     margin: 0 auto;
-    width: 90%; }
+    width: 70%;
+    position: relative;
+    z-index: 10; }
 
 .cart-product-note {
-  width: 35%; }
+  width: 75%;
+  position: absolute;
+  top: 0;
+  right: -90%; }
 
 .cart-footer {
   width: 100%;
-  padding-top: 24%;
+  padding-top: 30.4%;
   position: relative;
-  height: 0; }
+  height: 0;
+  margin-top: -6.5%; }
 
 .cart-total, .cart-calculator, .cart-actions {
   position: absolute;
-  top: 30%;
+  top: 40%;
   width: 18%;
   left: 4.5%;
   padding: 2%;
@@ -301,7 +321,7 @@ input.btn, .product input.price, .checkout-form input, button.btn, .product butt
 .cart-actions {
   left: 70%;
   text-align: center; }
-  .cart-actions .btn, .cart-actions .product .price, .product .cart-actions .price, .cart-actions .checkout-form input, .checkout-form .cart-actions input, .cart-actions .checkout-form textarea, .checkout-form .cart-actions textarea {
+  .cart-actions .btn, .cart-actions .product .price, .product .cart-actions .price, .cart-actions .checkout-form input[type=text], .checkout-form .cart-actions input[type=text], .cart-actions .checkout-form textarea, .checkout-form .cart-actions textarea {
     margin: 0 auto; }
 
 .cart-empty {

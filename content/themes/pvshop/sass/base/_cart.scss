@@ -1,85 +1,104 @@
 .page {
-	position: relative;
+    position: relative;
 }
 
 .cart-table {
-	width: 100%;
+    width: 100%;
+    margin: 0 auto;
 
-	th {
-		text-align: left;
-	}
-
-	td {
-		vertical-align: middle;
-		padding: 1.5em;
-	}
-
-	.cabinet-body {
-		@extend .cabinet-body;
-		border: 0;
-		background-repeat: no-repeat;
-		background-position: bottom center;
-		display: block;
-	}
+    .cabinet-body {
+        @extend .cabinet-body;
+        border: 0;
+        background-repeat: no-repeat;
+        background-position: top center;
+        display: block;
+    }
 
 
-	.quantity {
-		margin: 0;
-	}
+    .quantity {
+        margin: 0;
+        position: absolute;
+        top: 45%;
+        right: 6%;
+    }
 
-	.actions {
-		text-align: right;
-	}
+    .actions {
+        text-align: right;
+    }
+}
+
+.cart-product {
+    margin-bottom: -1px;
+}
+
+.cart-product-content {
+    width: 33%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.cart-product-subtotal {
+    position: absolute;
+    right: 6%;
+    top: 65%;
 }
 
 .cart-product-remove {
-	width: 3%
+    width: 3%
 }
 
 .cart-product-thumbnail {
-	width: 26%;
-	
-	img {
-		margin: 0 auto;
-		width: 90%;
-	}
+    width: 80%;
+    padding-bottom: 15%;
+
+    img {
+        margin: 0 auto;
+        width: 70%;
+        position: relative;
+        z-index: 10;
+    }
 }
 
 .cart-product-note {
-	width: 35%;
+    width: 75%;
+    position: absolute;
+    top: 0;
+    right: -90%;
 }
 
 .cart-footer {
-	width: 100%;
-	padding-top: 24%;
-	position: relative;
-	height: 0;
+    width: 100%;
+    padding-top: 30.4%;
+    position: relative;
+    height: 0;
+    margin-top: -6.5%;
 }
 
 .cart-total, .cart-calculator, .cart-actions {
-	position: absolute;
-	top: 30%;
-	width: 18%;
-	left: 4.5%;
-	padding: 2%;
-	text-align: center;
+    position: absolute;
+    top: 40%;
+    width: 18%;
+    left: 4.5%;
+    padding: 2%;
+    text-align: center;
 }
 
 .cart-total {
-	text-align: center;
-	p {
-		padding: .5em .5em .25em .5em;
-	}
+    text-align: center;
+    p {
+        padding: .5em .5em .25em .5em;
+    }
 }
 
 .cart-calculator {
-	left: 33%;
-	top: 15%;
-	width: 28%;
-	
-	p {
-		margin-top: 1em;
-	}
+    left: 33%;
+    top: 15%;
+    width: 28%;
+
+    p {
+        margin-top: 1em;
+    }
 
 }
 
@@ -87,14 +106,14 @@
 }
 
 .cart-actions {
-	left: 70%;
-	text-align: center;
+    left: 70%;
+    text-align: center;
 
-	.btn {
-		margin: 0 auto;
-	}
+    .btn {
+        margin: 0 auto;
+    }
 }
 
 .cart-empty {
-	margin: 2em 0 1em 0;
+    margin: 2em 0 1em 0;
 }
