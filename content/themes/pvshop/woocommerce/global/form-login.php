@@ -8,8 +8,9 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+return;
 
-if ( is_user_logged_in() ) 
+if ( is_user_logged_in() )
 	return;
 ?>
 <form method="post" class="login" <?php if ( $hidden ) echo 'style="display:none;"'; ?>>
