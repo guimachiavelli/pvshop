@@ -92,7 +92,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 <div class="cart-footer cabinet-bottom" colspan="6">
 	<?php do_action( 'woocommerce_cart_collaterals' ); ?>
 	<div class="cart-total cabinet-box">
-		<p>Grand Total: <?php wc_cart_totals_subtotal_html(); ?></p>
+		<p>Subtotal: <?php wc_cart_totals_subtotal_html(); ?></p>
 	</div>
 
 	<div class="cart-calculator">
