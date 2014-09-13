@@ -6,26 +6,26 @@
 .cabinet-top {
 	padding-top: 7%;
 	margin-top: -3.5%;
-	background: #fff url('../imgs/cabinet-top.jpg') no-repeat top center;
+	background: transparent url('../imgs/cabinet-top.jpg') no-repeat top center;
 	background-size: 100%;
 
 	&.cabinet--inside, .cabinet--inside & {
 		padding-top: 6.5%;
-		background: #fff url('../imgs/cabinet-inside-top.jpg') no-repeat top center;
+		background: transparent url('../imgs/cabinet-inside-top.jpg') no-repeat top center;
 		background-size: 100%;
 	}
 
 	&.cabinet--cart, .cabinet--cart & {
 		padding-top: 6.5%;
-		background: #fff url('../imgs/cabinet-cart-top.jpg') no-repeat top center;
+		background: transparent url('../imgs/cabinet-cart-top.png') no-repeat top center;
 		background-size: 100%;
 	}
 
 }
 
 .cabinet-body {
-	margin-top: -1px;
-	background: #fff url('../imgs/cabinet-body.jpg') repeat-y top center;
+	margin-top: -5px;
+	background: transparent url('../imgs/cabinet-body.jpg') repeat-y top center;
 	background-size: 100%;
 
 	.cabinet--inside & {
@@ -33,17 +33,18 @@
 	}
 
 	.cabinet--cart & {
-		background-image: url('../imgs/cabinet-cart-body.jpg');
+		background-image: url('../imgs/cabinet-cart-body.png');
 	}
 }
 
 .cabinet-bottom {
-	background: #fff url('../imgs/cabinet-bottom.jpg') no-repeat bottom center;
+	background: transparent url('../imgs/cabinet-bottom.jpg') no-repeat bottom center;
 	background-size: 100%;
 	height: 0;
 	position: absolute;
 	width: 100%;
-	padding-top: 6.3%;
+    padding-top: 6.3%;
+    margin-top: -5px;
 	bottom: 0;
 
 	.cabinet--inside & {
@@ -51,7 +52,7 @@
 	}
 
 	.cabinet--cart & {
-		background-image: url('../imgs/cabinet-cart-bottom.jpg');
+		background-image: url('../imgs/cabinet-cart-bottom.png');
 	}
 }
 

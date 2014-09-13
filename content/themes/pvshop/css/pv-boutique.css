@@ -49,7 +49,8 @@ body {
   width: 70%;
   margin: 1em auto;
   font-family: "Neutral Regular 4", Helvetica, Arial, sans-serif;
-  font-size: 12px; }
+  font-size: 12px;
+  background: white url(../imgs/bg.jpg); }
 
 img {
   display: block;
@@ -124,38 +125,39 @@ input.btn, .product input.price, .checkout-form input[type=text], button.btn, .p
 .cabinet-top {
   padding-top: 7%;
   margin-top: -3.5%;
-  background: white url("../imgs/cabinet-top.jpg") no-repeat top center;
+  background: transparent url("../imgs/cabinet-top.jpg") no-repeat top center;
   background-size: 100%; }
   .cabinet-top.cabinet--inside, .cabinet--inside .cabinet-top {
     padding-top: 6.5%;
-    background: white url("../imgs/cabinet-inside-top.jpg") no-repeat top center;
+    background: transparent url("../imgs/cabinet-inside-top.jpg") no-repeat top center;
     background-size: 100%; }
   .cabinet-top.cabinet--cart, .cabinet--cart .cabinet-top {
     padding-top: 6.5%;
-    background: white url("../imgs/cabinet-cart-top.jpg") no-repeat top center;
+    background: transparent url("../imgs/cabinet-cart-top.png") no-repeat top center;
     background-size: 100%; }
 
 .cabinet-body, .cart-table .cabinet-body {
-  margin-top: -1px;
-  background: white url("../imgs/cabinet-body.jpg") repeat-y top center;
+  margin-top: -5px;
+  background: transparent url("../imgs/cabinet-body.jpg") repeat-y top center;
   background-size: 100%; }
   .cabinet--inside .cabinet-body {
     background-image: url("../imgs/cabinet-inside-body.jpg"); }
   .cabinet--cart .cabinet-body {
-    background-image: url("../imgs/cabinet-cart-body.jpg"); }
+    background-image: url("../imgs/cabinet-cart-body.png"); }
 
 .cabinet-bottom {
-  background: white url("../imgs/cabinet-bottom.jpg") no-repeat bottom center;
+  background: transparent url("../imgs/cabinet-bottom.jpg") no-repeat bottom center;
   background-size: 100%;
   height: 0;
   position: absolute;
   width: 100%;
   padding-top: 6.3%;
+  margin-top: -5px;
   bottom: 0; }
   .cabinet--inside .cabinet-bottom {
     background-image: url("../imgs/cabinet-inside-bottom.jpg"); }
   .cabinet--cart .cabinet-bottom {
-    background-image: url("../imgs/cabinet-cart-bottom.jpg"); }
+    background-image: url("../imgs/cabinet-cart-bottom.png"); }
 
 .cabinet-box {
   background: transparent url("../imgs/cabinet-box.jpg") no-repeat center center;
@@ -182,7 +184,7 @@ input.btn, .product input.price, .checkout-form input[type=text], button.btn, .p
   width: 32%;
   height: 0;
   margin-left: 1%;
-  padding-top: 25%;
+  padding-top: 24%;
   position: relative; }
 
 .product-thumbnail {
