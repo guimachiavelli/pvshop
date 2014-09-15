@@ -342,7 +342,6 @@ input.btn, .product input.price, .checkout-form input[type=text], button.btn, .p
   height: 35%; }
 
 .checkout-form {
-  margin-top: 5%;
   overflow: hidden; }
 
 .checkout-review-title {
