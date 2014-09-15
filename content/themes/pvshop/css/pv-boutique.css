@@ -309,9 +309,9 @@ input.btn, .product input.price, .checkout-form input[type=text], button.btn, .p
 
 .cart-total, .cart-calculator, .cart-actions {
   position: absolute;
-  top: 40%;
+  top: 47%;
   width: 18%;
-  left: 4.5%;
+  left: 6.5%;
   padding: 2%;
   text-align: center; }
 
@@ -321,17 +321,21 @@ input.btn, .product input.price, .checkout-form input[type=text], button.btn, .p
     padding: .5em .5em .25em .5em; }
 
 .cart-calculator {
-  left: 33%;
-  top: 15%;
+  left: 34%;
+  top: 28%;
   width: 28%; }
   .cart-calculator p {
     margin-top: 1em; }
 
 .cart-actions {
-  left: 70%;
-  text-align: center; }
+  left: 72%;
+  text-align: center;
+  padding: 4px 15px; }
   .cart-actions .btn, .cart-actions .product .price, .product .cart-actions .price, .cart-actions .checkout-form input[type=text], .checkout-form .cart-actions input[type=text], .cart-actions .checkout-form textarea, .checkout-form .cart-actions textarea {
-    margin: 0 auto; }
+    margin: 0 auto;
+    border: 0;
+    width: 94%;
+    height: 40px; }
 
 .cart-empty-text {
   height: 300px;

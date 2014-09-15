@@ -25,7 +25,7 @@
 		next_post_link('%link', 'Next item >', true, null, 'product_cat');
 		previous_post_link('%link', '< Previous item', true, null, 'product_cat');
 		echo '<a href="' . SITE_URL . '">Keep shopping</a>';
-		echo '<a href="' . get_permalink(woocommerce_get_page_id('checkout')) . '" class="btn">Checkout</a>';
+		echo '<a href="' . get_permalink(woocommerce_get_page_id('cart')) . '" class="btn">Checkout</a>';
 		echo '</div>';
 
 	}
