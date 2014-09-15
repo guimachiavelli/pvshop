@@ -63,7 +63,7 @@ a {
   a:hover {
     text-decoration: underline; }
 
-.btn, .product .price, .checkout-form input[type=text], .checkout-form textarea {
+.btn, .product .price, .cart-widget, .checkout-form input[type=text], .checkout-form textarea {
   background: #dcdbd6;
   border: 1px solid #333;
   display: inline-block;
@@ -78,15 +78,15 @@ a {
   -webkit-appearance: none;
   -moz-appearance: none;
   outline: 0; }
-  .btn:hover, .product .price:hover, .checkout-form input[type=text]:hover, .checkout-form textarea:hover, .btn:focus, .product .price:focus, .checkout-form input[type=text]:focus, .checkout-form textarea:focus {
+  .btn:hover, .product .price:hover, .cart-widget:hover, .checkout-form input[type=text]:hover, .checkout-form textarea:hover, .btn:focus, .product .price:focus, .cart-widget:focus, .checkout-form input[type=text]:focus, .checkout-form textarea:focus {
     background-color: #c5c3ba;
     text-decoration: none; }
-  .btn:active, .product .price:active, .checkout-form input[type=text]:active, .checkout-form textarea:active {
+  .btn:active, .product .price:active, .cart-widget:active, .checkout-form input[type=text]:active, .checkout-form textarea:active {
     background-color: #a19f91; }
-  .btn a, .product .price a, .checkout-form input[type=text] a, .checkout-form textarea a {
+  .btn a, .product .price a, .cart-widget a, .checkout-form input[type=text] a, .checkout-form textarea a {
     text-decoration: none; }
 
-input.btn, .product input.price, .checkout-form input[type=text], button.btn, .product button.price {
+input.btn, .product input.price, input.cart-widget, .checkout-form input[type=text], button.btn, .product button.price, button.cart-widget {
   cursor: pointer; }
 
 .replaced-select {
@@ -235,7 +235,7 @@ input.btn, .product input.price, .checkout-form input[type=text], button.btn, .p
 
 .single-product-info {
   padding-top: 2em; }
-  .single-product-info p, .single-product-info .btn, .single-product-info .product .price, .product .single-product-info .price, .single-product-info .checkout-form input[type=text], .checkout-form .single-product-info input[type=text], .single-product-info .checkout-form textarea, .checkout-form .single-product-info textarea {
+  .single-product-info p, .single-product-info .btn, .single-product-info .product .price, .product .single-product-info .price, .single-product-info .cart-widget, .single-product-info .checkout-form input[type=text], .checkout-form .single-product-info input[type=text], .single-product-info .checkout-form textarea, .checkout-form .single-product-info textarea {
     margin-bottom: 1em; }
 
 .single-product-bottom-nav {
@@ -243,7 +243,7 @@ input.btn, .product input.price, .checkout-form input[type=text], button.btn, .p
   .single-product-bottom-nav a {
     display: block;
     margin-bottom: 1em; }
-  .single-product-bottom-nav .btn, .single-product-bottom-nav .product .price, .product .single-product-bottom-nav .price, .single-product-bottom-nav .checkout-form input[type=text], .checkout-form .single-product-bottom-nav input[type=text], .single-product-bottom-nav .checkout-form textarea, .checkout-form .single-product-bottom-nav textarea {
+  .single-product-bottom-nav .btn, .single-product-bottom-nav .product .price, .product .single-product-bottom-nav .price, .single-product-bottom-nav .cart-widget, .single-product-bottom-nav .checkout-form input[type=text], .checkout-form .single-product-bottom-nav input[type=text], .single-product-bottom-nav .checkout-form textarea, .checkout-form .single-product-bottom-nav textarea {
     display: inline-block; }
 
 .single-product-quantity {
@@ -331,7 +331,7 @@ input.btn, .product input.price, .checkout-form input[type=text], button.btn, .p
   left: 72%;
   text-align: center;
   padding: 4px 15px; }
-  .cart-actions .btn, .cart-actions .product .price, .product .cart-actions .price, .cart-actions .checkout-form input[type=text], .checkout-form .cart-actions input[type=text], .cart-actions .checkout-form textarea, .checkout-form .cart-actions textarea {
+  .cart-actions .btn, .cart-actions .product .price, .product .cart-actions .price, .cart-actions .cart-widget, .cart-actions .checkout-form input[type=text], .checkout-form .cart-actions input[type=text], .cart-actions .checkout-form textarea, .checkout-form .cart-actions textarea {
     margin: 0 auto;
     border: 0;
     width: 94%;
@@ -344,6 +344,14 @@ input.btn, .product input.price, .checkout-form input[type=text], button.btn, .p
 
 .cart-empty .cabinet-bottom {
   height: 35%; }
+
+.cart-widget {
+  position: absolute;
+  left: 5%;
+  z-index: 20;
+  bottom: 7%; }
+  .cart-widget p {
+    margin-top: .25em; }
 
 .checkout-form {
   overflow: hidden; }

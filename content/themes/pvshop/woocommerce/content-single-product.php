@@ -64,7 +64,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		 * @hooked woocommerce_output_product_data_tabs - 10
 		 * @hooked woocommerce_output_related_products - 20
 		 */
-		do_action( 'woocommerce_after_single_product_summary' );
+     do_action( 'woocommerce_after_single_product_summary' );
+				woocommerce_mini_cart();
+
 	?>
 
 	<meta itemprop="url" content="<?php the_permalink(); ?>" />
