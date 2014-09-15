@@ -70,10 +70,76 @@
 
 }
 
-        .place-order {
-            position: absolute;
-            left: 77%;
-            top: 50%;
+.place-order {
+    position: absolute;
+    left: 77%;
+    top: 50%;
+}
 
+
+.cabinet--thankyou {
+    .cabinet-body {
+        height: 400px;
+        padding: 5% 15% 15% 15%;
+    }
+    .cabinet-bottom {
+		background-image: url('../imgs/cabinet-thankyou-bottom.jpg');
+        padding-top: 10%;
+    }
+
+    table {
+        margin: 0 auto !important;
+        width: 100%;
+        th {
+            border-bottom: 1px solid darken(#dcdbd6, 10%);
         }
 
+        th,td {
+            text-align: left;
+            padding: .5em;
+            border-right: 1px solid darken(#dcdbd6, 10%);
+
+            &:last-child {
+                border-right: transparent;
+            }
+        }
+    }
+
+    .table-wrapper {
+        background: #dcdbd6;
+        border: 1px solid #333;
+        padding: 1em;
+        margin: 2em 0;
+    }
+}
+
+
+.bank-account {
+    width: 50%;
+    background: #fff;
+    margin: 0 auto;
+    padding: 1em;
+    border: 1px solid #333;
+    position: relative;
+    z-index: 10;
+    line-height: 1.2;
+
+    h2 {
+        display: none;
+    }
+
+    h3 {
+        margin: 2em 0 1em 0;
+    }
+
+    * {
+        border: 0 !important;
+        text-transform: none !important;
+        float: none !important;
+        font-size: 12px !important;
+    }
+
+    strong {
+        display: inline !important;
+    }
+}
