@@ -48,7 +48,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 							?>
 						</div>
 
-						<?php if ($_product->get_attribute('note') !== '') ?>
+						<?php if ($_product->get_attribute('note') !== '') : ?>
 						<div class="cart-product-note">
 							<p><?php echo $_product->get_attribute('note');?></p>
 						</div>
