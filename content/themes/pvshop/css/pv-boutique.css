@@ -163,6 +163,13 @@ input.btn, .product input.price, .checkout-form input[type=text], button.btn, .p
   background: transparent url("../imgs/cabinet-box.jpg") no-repeat center center;
   background-size: contain; }
 
+.cabinet--checkout.cabinet-top {
+  background-image: url("../imgs/cabinet-checkout-top.jpg"); }
+.cabinet--checkout .cabinet-body {
+  background-image: url("../imgs/cabinet-checkout-body.jpg"); }
+.cabinet--checkout .cabinet-bottom {
+  background-image: url("../imgs/cabinet-checkout-bottom.jpg"); }
+
 .woocommerce-message, .notification {
   position: absolute;
   width: 100%;
@@ -193,7 +200,7 @@ input.btn, .product input.price, .checkout-form input[type=text], button.btn, .p
   bottom: 12%;
   z-index: 1; }
   .product-thumbnail img {
-    width: 60%;
+    width: 66%;
     height: auto;
     margin: 0 auto; }
 
@@ -326,8 +333,13 @@ input.btn, .product input.price, .checkout-form input[type=text], button.btn, .p
   .cart-actions .btn, .cart-actions .product .price, .product .cart-actions .price, .cart-actions .checkout-form input[type=text], .checkout-form .cart-actions input[type=text], .cart-actions .checkout-form textarea, .checkout-form .cart-actions textarea {
     margin: 0 auto; }
 
-.cart-empty {
-  margin: 2em 0 1em 0; }
+.cart-empty-text {
+  height: 300px;
+  padding: 10%;
+  text-align: center; }
+
+.cart-empty .cabinet-bottom {
+  height: 35%; }
 
 .checkout-form {
   margin-top: 5%;
@@ -337,22 +349,43 @@ input.btn, .product input.price, .checkout-form input[type=text], button.btn, .p
   margin: 2em 0 1em 0; }
 
 .checkout-review {
-  width: 50%;
-  float: left; }
+  position: absolute;
+  top: 26%;
+  left: 3%;
+  width: 22%;
+  min-height: 200px;
+  display: block;
+  padding: 3%;
+  background: transparent url(../imgs/cabinet-box-big.jpg) no-repeat top center;
+  background-size: 100%; }
   .checkout-review th, .checkout-review td {
-    width: 50%;
     text-align: left;
-    padding: .5em 0; }
+    padding: .5em 1em .5em 0; }
+  .checkout-review .amount {
+    text-align: right; }
 
+.checkout-content {
+  padding: 5% 10%; }
+  .checkout-content .col-1, .checkout-content .col-2 {
+    position: relative;
+    z-index: 10; }
+
+.checkout-form #order_review {
+  position: static !important; }
 .checkout-form #payment {
   width: 40%;
-  float: left;
+  position: absolute;
+  left: 38%;
+  top: 30%;
   background: none; }
   .checkout-form #payment .payment_methods {
     border: 0 !important; }
-  .checkout-form #payment #place_order {
-    float: none !important; }
   .checkout-form #payment div.form-row {
     border: 0 !important; }
+
+.place-order {
+  position: absolute;
+  left: 77%;
+  top: 50%; }
 
 /*# sourceMappingURL=pv-boutique.css.map */

@@ -13,8 +13,12 @@ wc_print_notices();
 
 ?>
 
-<p class="cart-empty"><?php _e( 'Your cart is currently empty.', 'woocommerce' ) ?></p>
+<div class="cabinet cabinet-top cabinet--checkout cart-empty">
 
-<?php do_action( 'woocommerce_cart_is_empty' ); ?>
+    <div class="cabinet-body">
+        <p class="cart-empty-text"><?php _e( 'Your cart is currently empty.', 'woocommerce' ) ?></p>
+    </div>
 
-<p class="return-to-shop"><a class="btn wc-backward" href="<?php echo apply_filters( 'woocommerce_return_to_shop_redirect', get_permalink( wc_get_page_id( 'shop' ) ) ); ?>"><?php _e( 'Return To Shop', 'woocommerce' ) ?></a></p>
+    <div class="cabinet-bottom"></div>
+    <?php do_action( 'woocommerce_cart_is_empty' ); ?>
+</div>

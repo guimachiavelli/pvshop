@@ -60,3 +60,18 @@
 	background: transparent url('../imgs/cabinet-box.jpg') no-repeat center center;
 	background-size: contain;
 }
+
+
+.cabinet--checkout {
+    &.cabinet-top {
+    	background-image: url('../imgs/cabinet-checkout-top.jpg');
+    }
+
+    .cabinet-body {
+    	background-image: url('../imgs/cabinet-checkout-body.jpg');
+    }
+
+    .cabinet-bottom {
+    	background-image: url('../imgs/cabinet-checkout-bottom.jpg');
+    }
+}

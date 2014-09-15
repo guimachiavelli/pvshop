@@ -1,47 +1,80 @@
 .checkout-form {
-	margin-top: 5%;
-	overflow: hidden;
+    margin-top: 5%;
+    overflow: hidden;
 
-	input[type=text], textarea {
-		@extend .btn;
-	}
+    input[type=text], textarea {
+        @extend .btn;
+    }
 }
 
 .checkout-review-title {
-	margin: 2em 0 1em 0;
+    margin: 2em 0 1em 0;
 }
 
 .checkout-review {
-	width: 50%;
-	float: left;
+    position: absolute;
+    top: 26%;
+    left: 3%;
+    width: 22%;
+    min-height: 200px;
+    display: block;
+    padding: 3%;
+    background: transparent url(../imgs/cabinet-box-big.jpg) no-repeat top center;
+    background-size: 100%;
 
-	th, td {
-		width: 50%;
-		text-align: left;
-		padding: .5em 0;
-	}
+    th, td {
+        text-align: left;
+        padding: .5em 1em .5em 0;
+    }
+
+    .amount {
+        text-align: right;
+    }
 }
+
+.checkout-content {
+    padding: 5% 10%;
+
+    .col-1, .col-2 {
+        position: relative;
+        z-index: 10;
+    }
+}
+
+
 
 .checkout-form {
 
-	#payment {
-		width: 40%;
-		float: left;
-		background: none;
+    #order_review {
+        position: static !important;
+    }
 
-		.payment_methods {
-			border: 0 !important;
-		}
+    #payment {
+        width: 40%;
+        position: absolute;
+        left: 38%;
+        top: 30%;
+        background: none;
 
-		#place_order {
-			float: none !important;
-		}
+        .payment_methods {
+            border: 0 !important;
+        }
 
 
-		div.form-row {
-			border: 0 !important;
-		}
 
-	}
+        div.form-row {
+            border: 0 !important;
+        }
+
+    }
+
+
 }
+
+        .place-order {
+            position: absolute;
+            left: 77%;
+            top: 50%;
+
+        }
 

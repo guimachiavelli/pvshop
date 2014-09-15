@@ -24,35 +24,27 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 // filter hook for include new pages inside the payment method
 $get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', WC()->cart->get_checkout_url() ); ?>
 
-<form name="checkout" method="post" class="checkout-form" action="<?php echo esc_url( $get_checkout_url ); ?>">
+<form name="checkout" method="post" class="checkout-form cabinet cabinet--checkout cabinet-top" action="<?php echo esc_url( $get_checkout_url ); ?>">
 
+    <div class="checkout-content cabinet-body">
 	<?php if ( sizeof( $checkout->checkout_fields ) > 0 ) : ?>
-
 		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
-
 		<div class="col2-set" id="customer_details">
-
 			<div class="col-1">
-
 				<?php do_action( 'woocommerce_checkout_billing' ); ?>
-
 			</div>
 
 			<div class="col-2">
-
 				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
-
 			</div>
-
 		</div>
-
 		<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
+    </div>
 
-		<h3 class="checkout-review-title" id="order_review_heading"><?php _e( 'Your order', 'woocommerce' ); ?></h3>
-
-	<?php endif; ?>
-
-	<?php do_action( 'woocommerce_checkout_order_review' ); ?>
+    <div class="cart-footer cabinet-bottom" colspan="6">
+        <?php do_action( 'woocommerce_checkout_order_review' ); ?>
+    </div>
+    <?php endif; ?>
 
 </form>
 

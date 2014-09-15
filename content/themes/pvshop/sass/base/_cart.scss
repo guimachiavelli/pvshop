@@ -14,7 +14,6 @@
         display: block;
     }
 
-
     .quantity {
         margin: 0;
         position: absolute;
@@ -114,6 +113,14 @@
     }
 }
 
+.cart-empty-text {
+    height: 300px;
+    padding: 10%;
+    text-align: center;
+}
+
 .cart-empty {
-    margin: 2em 0 1em 0;
+    .cabinet-bottom {
+      height: 35%
+    }
 }
