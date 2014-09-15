@@ -183,7 +183,8 @@ input.btn, .product input.price, input.cart-product-remove, input.cart-product-n
 .woocommerce-message, .notification {
   position: absolute;
   width: 100%;
-  z-index: 5; }
+  z-index: 5;
+  display: none; }
 
 .notification-content {
   width: 50%;
