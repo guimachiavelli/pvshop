@@ -17,15 +17,25 @@
     "gulp-plumber": "^0.6.3",
     "gulp-rename": "^1.2.0",
     "gutil": "^1.4.3",
+    "napa": "^0.4.1",
     "vinyl-source-stream": "^0.1.1"
   },
   "browserify": {
     "debug": true,
-	"transform" : [
-		"browserify-shim"
-	]
+    "transform": [
+      "browserify-shim"
+    ]
   },
-  "browserify-shim" : {
-	  "jquery": "global:$"
+  "scripts" : {
+    "install" : "napa"
+  },
+  "napa" : {
+    "flexslider" : "woothemes/FlexSlider#version/2.2.2"
+  },
+  "browser" : {
+    "slider" : "flexslider/jquery.flexslider-min.js"
+  },
+  "browserify-shim": {
+    "jquery": "global:$"
   }
 }

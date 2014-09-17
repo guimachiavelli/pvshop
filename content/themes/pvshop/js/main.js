@@ -1,11 +1,13 @@
 (function($){
-	'use strict';
+    'use strict';
 
-	var collectionNav = require('./src/collectionNav');
+    var collectionNav = require('./src/collectionNav'),
+        productSlider = require('./src/productSlider');
 
 
-	$(document).ready(function(){
-		collectionNav.init($('#collection-nav'));
-	});
+    $(document).ready(function(){
+        collectionNav.init($('#collection-nav'));
+        productSlider.init($('.single-product-thumbnails'));
+    });
 
 }($));

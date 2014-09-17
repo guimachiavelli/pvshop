@@ -1,22 +1,22 @@
 (function($, pv){
-	'use strict';
+    'use strict';
 
-	var $ = require('jquery');
+    var $ = require('jquery');
 
-	var collectionNav;
+    var collectionNav;
 
-	collectionNav = {
-		init: function($el) {
-			$el.on('change', collectionNav.onSelectCollection);
-		},
+    collectionNav = {
+        init: function($el) {
+            $el.on('change', collectionNav.onSelectCollection);
+        },
 
-		onSelectCollection: function()	{
-			var collectionSlug = $(this).find(':selected').val();
-			window.location = pv.config.siteURL + '/collection/' + collectionSlug;
-		}
-	};
+        onSelectCollection: function()	{
+            var collectionSlug = $(this).find(':selected').val();
+            window.location = pv.config.siteURL + '/collection/' + collectionSlug;
+        }
+    };
 
 
-	module.exports = collectionNav;
+    module.exports = collectionNav;
 
 }($, pv));

@@ -241,8 +241,13 @@ input.btn, .product input.price, input.cart-product-remove, input.cart-product-n
     position: absolute;
     bottom: 7.5%; }
 
-.single-product-thumbnails {
-  position: absolute; }
+.carousel-wrapper {
+  position: absolute;
+  bottom: 8%;
+  width: 100%; }
+  .carousel-wrapper img {
+    position: static;
+    width: 100%; }
 
 .single-product-info {
   padding-top: 2em; }
@@ -259,6 +264,15 @@ input.btn, .product input.price, input.cart-product-remove, input.cart-product-n
 
 .single-product-quantity {
   display: none; }
+
+.flex-direction-nav .flex-prev, .flex-direction-nav .flex-next {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: 30;
+  text-indent: -99999px; }
+.flex-direction-nav .flex-next {
+  right: 0; }
 
 .page {
   position: relative; }
