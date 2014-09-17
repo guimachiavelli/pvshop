@@ -6,7 +6,6 @@
 
     var productSlider = {
         init: function($el){
-            console.log($el);
             $el.flexslider(productSlider.config);
         },
 

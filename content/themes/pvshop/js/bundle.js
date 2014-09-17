@@ -49,7 +49,6 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
 
     var productSlider = {
         init: function($el){
-            console.log($el);
             $el.flexslider(productSlider.config);
         },
 
