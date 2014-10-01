@@ -39,7 +39,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 						<div class="cart-product-thumbnail">
 							<?php
-								$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
+								$thumbnail = get_the_post_thumbnail($product_id, 'large');
 
 								if ( ! $_product->is_visible() )
 									echo $thumbnail;
