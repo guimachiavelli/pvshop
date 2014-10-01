@@ -50,7 +50,7 @@ body {
   margin: 1em auto;
   font-family: "Neutral Regular 4", Helvetica, Arial, sans-serif;
   font-size: 12px;
-  background: white url(../imgs/bg.jpg); }
+  background: #fff url(../imgs/bg.jpg); }
 
 img {
   display: block;
@@ -72,7 +72,7 @@ a {
   font-size: 12px;
   line-height: 12px;
   font-family: "Neutral Regular 4", Helvetica, Arial, sans-serif;
-  color: #333333;
+  color: #333;
   text-decoration: none;
   position: relative;
   -webkit-appearance: none;
@@ -308,11 +308,15 @@ input.btn, .product input.price, input.cart-product-remove, input.cart-product-n
   top: 65%; }
 
 .cart-product-remove {
-  width: 3%;
   position: absolute !important;
-  top: 5%;
-  left: 4%;
-  z-index: 20; }
+  top: 25%;
+  right: 4%;
+  z-index: 20;
+  border-radius: 100%; }
+  .cart-product-remove a {
+    font-size: 16px;
+    display: block;
+    padding: 0.1em; }
 
 .cart-product-thumbnail {
   width: 80%;
@@ -468,5 +472,3 @@ input.btn, .product input.price, input.cart-product-remove, input.cart-product-n
     font-size: 12px !important; }
   .bank-account strong {
     display: inline !important; }
-
-/*# sourceMappingURL=pv-boutique.css.map */

@@ -44,12 +44,17 @@
 }
 
 .cart-product-remove {
-    width: 3%;
     @extend .btn;
     position: absolute !important;
-    top: 5%;
-    left: 4%;
+    top: 25%;
+    right: 4%;
     z-index: 20;
+	border-radius: 100%;
+	a {
+		font-size: 16px;
+		display: block;
+		padding: .1em
+	}
 }
 
 .cart-product-thumbnail {
