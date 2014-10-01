@@ -1,145 +1,157 @@
 .checkout-form {
-    overflow: hidden;
+	overflow: hidden;
 
-    input[type=text], textarea {
-        @extend .btn;
-    }
+	input[type=text], textarea {
+		@extend .btn;
+	}
 }
 
 .checkout-review-title {
-    margin: 2em 0 1em 0;
+	margin: 2em 0 1em 0;
 }
 
 .checkout-review {
-    position: absolute;
-    top: 26%;
-    left: 3%;
-    width: 22%;
-    min-height: 200px;
-    display: block;
-    padding: 3%;
-    background: transparent url(../imgs/cabinet-box-big.jpg) no-repeat top center;
-    background-size: 100%;
+	position: absolute;
+	top: 26%;
+	left: 3%;
+	width: 22%;
+	min-height: 200px;
+	display: block;
+	padding: 3%;
+	background: transparent url(../imgs/cabinet-box-big.jpg) no-repeat top center;
+	background-size: 100%;
 
-    th, td {
-        text-align: left;
-        padding: .5em 1em .5em 0;
-    }
 
-    .amount {
-        text-align: right;
-    }
+	th, td {
+		width: 50%;
+		text-align: left;
+		padding: .5em 1em .5em 0;
+	}
+
+	.amount {
+		text-align: right;
+		display: block;
+		width: 100%;
+	}
+
+	.shipping {
+		.amount {
+			float: right;
+			width: auto;
+		}
+	}
+
 }
 
 .checkout-content {
-    padding: 5% 10%;
+	padding: 5% 10%;
 
-    .col-1, .col-2 {
-        position: relative;
-        z-index: 10;
-    }
+	.col-1, .col-2 {
+		position: relative;
+		z-index: 10;
+	}
 }
 
 
 
 .checkout-form {
 
-    #order_review {
-        position: static !important;
-    }
+	#order_review {
+		position: static !important;
+	}
 
-    #payment {
-        width: 40%;
-        position: absolute;
-        left: 38%;
-        top: 30%;
-        background: none;
+	#payment {
+		width: 40%;
+		position: absolute;
+		left: 38%;
+		top: 30%;
+		background: none;
 
-        .payment_methods {
-            border: 0 !important;
-        }
+		.payment_methods {
+			border: 0 !important;
+		}
 
 
 
-        div.form-row {
-            border: 0 !important;
-        }
+		div.form-row {
+			border: 0 !important;
+		}
 
-    }
+	}
 
 
 }
 
 .place-order {
-    position: absolute;
-    left: 77%;
-    top: 50%;
+	position: absolute;
+	left: 77%;
+	top: 50%;
 }
 
 
 .cabinet--thankyou {
-    .cabinet-body {
-        height: 400px;
-        padding: 5% 15% 15% 15%;
-    }
-    .cabinet-bottom {
+	.cabinet-body {
+		height: 400px;
+		padding: 5% 15% 15% 15%;
+	}
+	.cabinet-bottom {
 		background-image: url('../imgs/cabinet-thankyou-bottom.jpg');
-        padding-top: 10%;
-    }
+		padding-top: 10%;
+	}
 
-    table {
-        margin: 0 auto !important;
-        width: 100%;
-        th {
-            border-bottom: 1px solid darken(#dcdbd6, 10%);
-        }
+	table {
+		margin: 0 auto !important;
+		width: 100%;
+		th {
+			border-bottom: 1px solid darken(#dcdbd6, 10%);
+		}
 
-        th,td {
-            text-align: left;
-            padding: .5em;
-            border-right: 1px solid darken(#dcdbd6, 10%);
+		th,td {
+			text-align: left;
+			padding: .5em;
+			border-right: 1px solid darken(#dcdbd6, 10%);
 
-            &:last-child {
-                border-right: transparent;
-            }
-        }
-    }
+			&:last-child {
+				border-right: transparent;
+			}
+		}
+	}
 
-    .table-wrapper {
-        background: #dcdbd6;
-        border: 1px solid #333;
-        padding: 1em;
-        margin: 2em 0;
-    }
+	.table-wrapper {
+		background: #dcdbd6;
+		border: 1px solid #333;
+		padding: 1em;
+		margin: 2em 0;
+	}
 }
 
 
 .bank-account {
-    width: 50%;
-    background: #fff;
-    margin: 0 auto;
-    padding: 1em;
-    border: 1px solid #333;
-    position: relative;
-    z-index: 10;
-    line-height: 1.2;
+	width: 50%;
+	background: #fff;
+	margin: 0 auto;
+	padding: 1em;
+	border: 1px solid #333;
+	position: relative;
+	z-index: 10;
+	line-height: 1.2;
 
-    h2 {
-        display: none;
-    }
+	h2 {
+		display: none;
+	}
 
-    h3 {
-        margin: 2em 0 1em 0;
-    }
+	h3 {
+		margin: 2em 0 1em 0;
+	}
 
-    * {
-        border: 0 !important;
-        text-transform: none !important;
-        float: none !important;
-        font-size: 12px !important;
-    }
+	* {
+		border: 0 !important;
+		text-transform: none !important;
+		float: none !important;
+		font-size: 12px !important;
+	}
 
-    strong {
-        display: inline !important;
-    }
+	strong {
+		display: inline !important;
+	}
 }

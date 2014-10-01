@@ -400,10 +400,16 @@ input.btn, .product input.price, input.cart-product-remove, input.cart-product-n
   background: transparent url(../imgs/cabinet-box-big.jpg) no-repeat top center;
   background-size: 100%; }
   .checkout-review th, .checkout-review td {
+    width: 50%;
     text-align: left;
     padding: .5em 1em .5em 0; }
   .checkout-review .amount {
-    text-align: right; }
+    text-align: right;
+    display: block;
+    width: 100%; }
+  .checkout-review .shipping .amount {
+    float: right;
+    width: auto; }
 
 .checkout-content {
   padding: 5% 10%; }

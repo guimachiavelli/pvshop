@@ -11,7 +11,8 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 ?>
 <tr class="shipping">
-	<td>
+	<td colspan="2">
+		<div class="shipping-wrapper">
 		<?php if ( ! empty( $available_methods ) ) : ?>
 
 			<?php if ( 1 === count( $available_methods ) ) :
@@ -86,5 +87,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 				echo '<p class="woocommerce-shipping-contents"><small>' . __( 'Shipping', 'woocommerce' ) . ': ' . implode( ', ', $product_names ) . '</small></p>';
 			?>
 		<?php endif; ?>
+				</div>
 	</td>
 </tr>

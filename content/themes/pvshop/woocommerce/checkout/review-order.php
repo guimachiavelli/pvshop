@@ -13,10 +13,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 <?php if ( ! is_ajax() ) : ?><div id="order_review"><?php endif; ?>
     <h3 class="checkout-review-title" id="order_review_heading"><?php _e( 'Your order', 'woocommerce' ); ?></h3>
 	<table class="checkout-review">
-		<tfoot>
+		<tbody>
 
 			<tr class="cart-subtotal">
-				<th><?php _e( 'Cart Subtotal', 'woocommerce' ); ?></th>
+				<td><?php _e( 'Cart Subtotal', 'woocommerce' ); ?></td>
 				<td><?php wc_cart_totals_subtotal_html(); ?></td>
 			</tr>
 
@@ -34,14 +34,15 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			<?php do_action( 'woocommerce_review_order_before_order_total' ); ?>
 
 			<tr class="order-total">
-				<th><?php _e( 'Grand Total', 'woocommerce' ); ?></th>
+				<td><?php _e( 'Grand Total', 'woocommerce' ); ?></td>
 				<td><?php wc_cart_totals_order_total_html(); ?></td>
 			</tr>
 
 			<?php do_action( 'woocommerce_review_order_after_order_total' ); ?>
 
-		</tfoot>
 
+
+		</tbody>
 	</table>
 
 	<?php do_action( 'woocommerce_review_order_before_payment' ); ?>
