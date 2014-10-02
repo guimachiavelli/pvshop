@@ -13,7 +13,7 @@
 	remove_all_actions('woocommerce_after_single_product_summary');
 
 	function pv_single_product_content() {
-		echo '<p>' . get_the_content() . '</p>';
+		echo the_content();
 	}
 
 	function pv_single_product_view_cart() {
