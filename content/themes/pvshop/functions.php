@@ -50,7 +50,7 @@ function custom_woocommerce_billing_fields( $fields ) {
 add_filter('woocommerce_cart_shipping_method_full_label', 'remove_local_pickup_free_label', 10, 2);
 function remove_local_pickup_free_label($full_label, $method){
 
-	$label = split(':',$full_label);
+	$label = explode(':',$full_label);
 	$label[0] = '<span class="shipping-method-label">' . $label[0] . '</span>';
 
 	return join(' ', $label);
