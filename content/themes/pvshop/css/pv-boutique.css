@@ -258,9 +258,12 @@ input.btn, .product input.price, input.cart-product-remove, input.cart-product-n
     width: 100%; }
 
 .single-product-info {
-  padding-top: 2em; }
-  .single-product-info p, .single-product-info .btn, .single-product-info .product .price, .product .single-product-info .price, .single-product-info .cart-product-remove, .single-product-info .cart-product-note, .single-product-info .cart-widget, .single-product-info .checkout-form input[type=text], .checkout-form .single-product-info input[type=text], .single-product-info .checkout-form textarea, .checkout-form .single-product-info textarea {
+  padding-top: 2em;
+  padding-right: 4%; }
+  .single-product-info .product_title {
     margin-bottom: 1em; }
+  .single-product-info .price {
+    margin-top: 1em; }
 
 .single-product-bottom-nav {
   margin-top: 1em; }

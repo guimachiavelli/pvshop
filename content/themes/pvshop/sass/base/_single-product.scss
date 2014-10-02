@@ -38,10 +38,19 @@
 
 .single-product-info {
     padding-top: 2em;
+	padding-right: 4%;
+
+	.product_title {
+		margin-bottom: 1em;
+	}
 
     p, .btn {
-        margin-bottom: 1em;
+        
     }
+
+	.price {
+		margin-top: 1em
+	}
 }
 
 .single-product-bottom-nav {
