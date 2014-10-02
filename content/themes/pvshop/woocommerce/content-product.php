@@ -16,6 +16,8 @@ global $product, $woocommerce_loop;
 // Store loop count we're currently on
 if ( empty( $woocommerce_loop['loop'] ) )
 	$woocommerce_loop['loop'] = 0;
+	$count = 0;
+
 
 // Store column count for displaying the grid
 if ( empty( $woocommerce_loop['columns'] ) )
@@ -25,8 +27,18 @@ if ( empty( $woocommerce_loop['columns'] ) )
 if ( ! $product || ! $product->is_visible() )
 	return;
 
+$grill = false;
+
 // Increase loop count
 $woocommerce_loop['loop']++;
+
+if ($woocommerce_loop['loop'] === 2 && $grill === false) {
+?>
+	<li <?php post_class('cabinet-grill'); ?>></li>
+<?php
+	$woocommerce_loop['loop'] = 2 ;
+	$grill = true;
+}
 
 // Extra post classes
 $classes = array();
@@ -41,7 +53,7 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 
 	<a href="<?php the_permalink(); ?>">
 
-		<?php
+<?php
 			/**
 			 * woocommerce_before_shop_loop_item_title hook
 			 *
