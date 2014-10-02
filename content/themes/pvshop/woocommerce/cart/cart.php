@@ -100,7 +100,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 	</div>
 
 	<div class="cart-actions">
-		<!--<input type="submit" class="btn" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" -->
+		<input type="submit" class="btn" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>">
 		<input type="submit" class="checkout-button alt wc-forward btn" name="proceed" value="<?php _e( 'Checkout', 'woocommerce' ); ?>" />
 	</div>
 

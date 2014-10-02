@@ -269,7 +269,9 @@ input.btn, .product input.price, input.cart-product-remove, input.cart-product-n
     margin-top: 1em; }
 
 .single-product-bottom-nav {
-  margin-top: 1em; }
+  margin-top: 1em;
+  position: relative;
+  z-index: 5; }
   .single-product-bottom-nav a {
     display: block;
     margin-bottom: 1em; }
@@ -377,9 +379,11 @@ input.btn, .product input.price, input.cart-product-remove, input.cart-product-n
 
 .cart-actions {
   left: 72%;
-  top: 52%;
+  top: 42%;
   text-align: center;
   padding: 4px 15px; }
+  .cart-actions .checkout-button {
+    margin-top: 1em; }
 
 .cart-empty-text {
   height: 300px;
