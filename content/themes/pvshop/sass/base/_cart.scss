@@ -97,8 +97,19 @@
 
 .cart-total {
 	text-align: center;
+	top: 57%;
+
 	p {
 		padding: .5em .5em .25em .5em;
+	}
+
+	.update-btn {
+		position: absolute;
+		top: -50px;
+		left: 18%;
+		border: 0;
+		padding: 16px 1.5em 13px 1.5em;
+		@extend .cabinet-button;
 	}
 }
 
@@ -121,6 +132,9 @@
 	
 	.checkout-button {
 		margin-top: 1em;
+		border: 0;
+		padding: 12px 1.5em 10px 1.5em;
+		@extend .cabinet-button;
 	}
 }
 
