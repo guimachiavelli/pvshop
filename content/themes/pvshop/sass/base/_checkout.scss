@@ -84,8 +84,15 @@
 
 .place-order {
 	position: absolute;
-	left: 77%;
-	top: 50%;
+	left: 72.5%;
+	top: 45.5%;
+
+	.btn {
+		@extend .cabinet-button;
+		width: 150px;
+		padding: 24px 0 20px 0;
+		border: 0;
+	}
 }
 
 
