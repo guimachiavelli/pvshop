@@ -519,3 +519,5 @@ input.btn, .product input.price, input.cart-product-remove, input.cart-product-n
     font-size: 12px !important; }
   .bank-account strong {
     display: inline !important; }
+  .bank-account:empty {
+    display: none; }

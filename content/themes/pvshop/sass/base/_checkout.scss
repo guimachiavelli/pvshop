@@ -71,8 +71,6 @@
 			border: 0 !important;
 		}
 
-
-
 		div.form-row {
 			border: 0 !important;
 		}
@@ -160,5 +158,9 @@
 
 	strong {
 		display: inline !important;
+	}
+
+	&:empty {
+		display: none;
 	}
 }
