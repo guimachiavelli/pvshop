@@ -248,7 +248,7 @@ input.btn, .product input.price, input.cart-product-remove, input.cart-product-n
   z-index: 1;
   float: left;
   margin-left: 2.25%;
-  margin-right: 5%;
+  margin-right: 2%;
   margin-bottom: -2%; }
   .single-product-image img {
     width: 100%;
