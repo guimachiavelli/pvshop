@@ -266,7 +266,9 @@ input.btn, .product input.price, input.cart-product-remove, input.cart-product-n
 
 .single-product-info {
   padding-top: 2em;
-  padding-right: 4%; }
+  padding-right: 4%;
+  float: right;
+  width: 26%; }
   .single-product-info .product_title {
     margin-bottom: 1em; }
   .single-product-info p {
