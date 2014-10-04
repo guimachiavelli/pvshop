@@ -376,15 +376,15 @@ input.btn, .product input.price, input.cart-product-remove, input.cart-product-n
 
 .cart-total {
   text-align: center;
-  top: 57%; }
+  top: 60%; }
   .cart-total p {
     padding: .5em .5em .25em .5em; }
   .cart-total .update-btn {
     position: absolute;
-    top: -50px;
-    left: 18%;
+    top: -55px;
+    left: 15.5%;
     border: 0;
-    padding: 16px 1.5em 13px 1.5em; }
+    padding: 19px 1.5em 15px 1.5em; }
 
 .cart-calculator {
   left: 34%;

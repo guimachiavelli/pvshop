@@ -97,7 +97,7 @@
 
 .cart-total {
 	text-align: center;
-	top: 57%;
+	top: 60%;
 
 	p {
 		padding: .5em .5em .25em .5em;
@@ -105,10 +105,10 @@
 
 	.update-btn {
 		position: absolute;
-		top: -50px;
-		left: 18%;
+		top: -55px;
+		left: 15.5%;
 		border: 0;
-		padding: 16px 1.5em 13px 1.5em;
+		padding: 19px 1.5em 15px 1.5em;
 		@extend .cabinet-button;
 	}
 }
