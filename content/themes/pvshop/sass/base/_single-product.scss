@@ -1,5 +1,6 @@
 .single-product {
-    
+    min-height: 435px;
+
     &:after {
         content: '';
         display: block;
@@ -14,6 +15,7 @@
     position: absolute;
     z-index: 1;
     margin-left: 2.25%;
+	bottom: -2.5%;
 
     img {
         width: 100%;

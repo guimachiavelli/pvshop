@@ -235,10 +235,12 @@ input.btn, .product input.price, input.cart-product-remove, input.cart-product-n
   right: 3%;
   bottom: 12%; }
 
-.single-product:after {
-  content: '';
-  display: block;
-  clear: both; }
+.single-product {
+  min-height: 435px; }
+  .single-product:after {
+    content: '';
+    display: block;
+    clear: both; }
 
 .single-product-image {
   width: 63%;
@@ -246,7 +248,8 @@ input.btn, .product input.price, input.cart-product-remove, input.cart-product-n
   padding-top: 59%;
   position: absolute;
   z-index: 1;
-  margin-left: 2.25%; }
+  margin-left: 2.25%;
+  bottom: -2.5%; }
   .single-product-image img {
     width: 100%;
     height: auto;
