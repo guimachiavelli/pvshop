@@ -11,11 +11,8 @@
     width: 63%;
     height: 0;
     padding-top: 59%;
-    position: relative;
+    position: absolute;
     z-index: 1;
-    float: left;
-    margin-left: 2.25%;
-    margin-right: 5%;
 
     img {
         width: 100%;
@@ -39,6 +36,8 @@
 .single-product-info {
     padding-top: 2em;
 	padding-right: 4%;
+	margin-left: 70%;
+	
 
 	.product_title {
 		margin-bottom: 1em;
