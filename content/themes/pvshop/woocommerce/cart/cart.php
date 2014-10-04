@@ -92,7 +92,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 <div class="cart-footer cabinet-bottom" colspan="6">
 	<?php do_action( 'woocommerce_cart_collaterals' ); ?>
 	<div class="cart-total cabinet-box">
-		<input type="submit" class="btn update-btn" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>">
+		<input type="submit" class="btn update-btn" name="update_cart" value="Update Cart">
 		<p>Subtotal: <?php wc_cart_totals_subtotal_html(); ?></p>
 	</div>
 
