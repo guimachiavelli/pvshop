@@ -399,9 +399,10 @@ input.btn, .product input.price, input.cart-product-remove, input.cart-product-n
   text-align: center;
   padding: 4px 15px; }
   .cart-actions .checkout-button {
+    width: 130px;
     margin-top: 1em;
     border: 0;
-    padding: 12px 1.5em 10px 1.5em; }
+    padding: 20px 0 17px 0; }
 
 .cart-empty-text {
   height: 300px;

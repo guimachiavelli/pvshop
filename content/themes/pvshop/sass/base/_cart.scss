@@ -131,9 +131,10 @@
 	padding: 4px 15px;
 	
 	.checkout-button {
+		width: 130px;
 		margin-top: 1em;
 		border: 0;
-		padding: 12px 1.5em 10px 1.5em;
+		padding: 20px 0 17px 0;
 		@extend .cabinet-button;
 	}
 }
