@@ -248,8 +248,7 @@ input.btn, .product input.price, input.cart-product-remove, input.cart-product-n
   z-index: 1;
   float: left;
   margin-left: 2.25%;
-  margin-right: 2%;
-  margin-bottom: -2%; }
+  margin-right: 5%; }
   .single-product-image img {
     width: 100%;
     height: auto;
@@ -266,9 +265,7 @@ input.btn, .product input.price, input.cart-product-remove, input.cart-product-n
 
 .single-product-info {
   padding-top: 2em;
-  padding-right: 4%;
-  float: right;
-  width: 26%; }
+  padding-right: 4%; }
   .single-product-info .product_title {
     margin-bottom: 1em; }
   .single-product-info p {
