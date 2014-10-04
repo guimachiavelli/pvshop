@@ -267,7 +267,7 @@ input.btn, .product input.price, input.cart-product-remove, input.cart-product-n
 .single-product-info {
   padding-top: 2em;
   padding-right: 4%;
-  padding-bottom: 6%;
+  padding-bottom: 1%;
   margin-left: 70%; }
   .single-product-info .product_title {
     margin-bottom: 1em; }
