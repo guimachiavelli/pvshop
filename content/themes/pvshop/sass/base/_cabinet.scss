@@ -6,12 +6,12 @@
 .cabinet-top {
 	padding-top: 7%;
 	margin-top: -3.5%;
-	background: transparent url('../imgs/cabinet-top.jpg') no-repeat top center;
+	background: transparent url('../imgs/cabinet-top.png') no-repeat top center;
 	background-size: 100%;
 
 	&.cabinet--inside, .cabinet--inside & {
 		padding-top: 6.5%;
-		background: transparent url('../imgs/cabinet-inside-top.jpg') no-repeat top center;
+		background: transparent url('../imgs/cabinet-inside-top.png') no-repeat top center;
 		background-size: 100%;
 	}
 
@@ -64,7 +64,7 @@
 
 .cabinet--checkout {
     &.cabinet-top {
-    	background-image: url('../imgs/cabinet-checkout-top.jpg');
+    	background-image: url('../imgs/cabinet-checkout-top.png');
     }
 
     .cabinet-body {
